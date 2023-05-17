@@ -1,15 +1,27 @@
 import React from "react";
+import logo from "../../assets/logo.jpg"
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const nav = (
     <>
       <li>
-        <a>Item 3</a>
+        <NavLink to='/'>Home</NavLink>
       </li>
 
       <li>
-        <a>Item 1</a>
+        <NavLink to={`/`}>All Toys</NavLink>
       </li>
+      <li>
+        <NavLink to={`/`}>My Toys</NavLink>
+      </li>
+      <li>
+        <NavLink to={`/`}>Add A Toy</NavLink>
+      </li>
+      <li>
+        <NavLink to={`/`}>Blogs</NavLink>
+      </li>
+     
     </>
   );
   return (
@@ -24,10 +36,11 @@ const Navbar = () => {
         {nav}
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+    <a className="btn btn-ghost normal-case text-xl"><img src={logo} className="w-12 rounded-full" alt="" />
+    <h1 className="ml-3 text-white">Baby Dolls</h1></a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1 text-[20px] font-semibold text-white">
+    <ul className="menu menu-horizontal px-1 text-[20px] font-semibold text-white space-x-3">
       {nav}
     </ul>
   </div>
