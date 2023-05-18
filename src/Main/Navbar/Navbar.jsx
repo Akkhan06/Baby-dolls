@@ -6,20 +6,20 @@ const Navbar = () => {
   const nav = (
     <>
       <li>
-        <NavLink to='/'>Home</NavLink>
+        <Link to='/'>Home</Link>
       </li>
 
       <li>
-        <NavLink to={`/`}>All Toys</NavLink>
+        <Link to={`/`}>All Toys</Link>
       </li>
       <li>
-        <NavLink to={`/`}>My Toys</NavLink>
+        <Link to={`/`}>My Toys</Link>
       </li>
       <li>
-        <NavLink to={`/`}>Add A Toy</NavLink>
+        <Link to={`/`}>Add A Toy</Link>
       </li>
       <li>
-        <NavLink to={`/`}>Blogs</NavLink>
+        <Link to={`/`}>Blogs</Link>
       </li>
      
     </>
@@ -45,9 +45,10 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  <div className="avatar placeholder">
+  <div className="avatar placeholder items-center">
+  <h1 className="font-semibold mr-3">Afsar khan</h1>
   <div className="bg-neutral-focus text-neutral-content rounded-full w-8">
-    <span className="text-xs">AA</span>
+   <span className="text-xs">AA</span>
   </div>
 </div>
   </div>
