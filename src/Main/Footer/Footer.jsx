@@ -3,7 +3,7 @@ import footer from "../../assets/footer.avif"
 
 const Footer = () => {
   return (
-    <div>
+    <div className="">
       <footer className="footer footer-center p-10 bg-cover bg-[url('https://img.freepik.com/premium-photo/christmas-composition-top-view_3544-269.jpg?w=996')] text-primary-content">
         <div>
           <svg

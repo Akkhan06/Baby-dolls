@@ -10,22 +10,22 @@ const Navbar = () => {
       </li>
 
       <li>
-        <Link to={`/`}>All Toys</Link>
+        <Link to={`/`}>All toys</Link>
       </li>
       <li>
-        <Link to={`/`}>My Toys</Link>
+        <Link to={`/`}>My toys</Link>
       </li>
       <li>
-        <Link to={`/`}>Add A Toy</Link>
+        <Link to={`/`}>Add A toy</Link>
       </li>
       <li>
-        <Link to={`/`}>Blogs</Link>
+        <Link to={`/blog`}>Blogs</Link>
       </li>
      
     </>
   );
   return (
-    <div className="bg-[#9363b5]">
+    <div className="bg-[#bfa0d5]">
         <div className="navbar  max-w-[1240px] mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
@@ -37,19 +37,20 @@ const Navbar = () => {
       </ul>
     </div>
     <a className="btn btn-ghost normal-case text-xl"><img src={logo} className="w-12 rounded-full" alt="" />
-    <h1 className="ml-3 text-white">Baby Dolls</h1></a>
+    <h1 className="ml-3 text-white hidden md:block">Baby Dolls</h1></a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1 text-[20px] font-semibold text-white space-x-3">
+    <ul className="menu menu-horizontal px-1 text-[20px] font-semibold text-white normal-case ">
       {nav}
     </ul>
   </div>
   <div className="navbar-end">
   <div className="avatar placeholder items-center">
-  <h1 className="font-semibold mr-3">Afsar khan</h1>
+  <h1 className="font-semibold  md:mr-3">Afsar khan</h1>
   <div className="bg-neutral-focus text-neutral-content rounded-full w-8">
    <span className="text-xs">AA</span>
   </div>
+  <Link to='/login'><button className="btn btn-ghost normal-case">Log out</button></Link>
 </div>
   </div>
 </div>
