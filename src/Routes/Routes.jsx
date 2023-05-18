@@ -6,6 +6,7 @@ import {
 import Navbar from '../Main/Navbar/Navbar';
 import Main from '../Main/Main';
 import Banner from '../Main/Banner/Banner';
+import Home from '../pages/Home/Home';
  
 const router = createBrowserRouter([
     {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
       children: [
         {
             path: "/",
-            element: <Banner></Banner>
+            element: <Home></Home>
         }
       ]
     },
