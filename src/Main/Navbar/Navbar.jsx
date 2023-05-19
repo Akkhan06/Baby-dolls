@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import logo from "../../assets/logo.jpg"
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const {user, logOut} =useContext(AuthContext)
+  const [enter, setEnter] = useState(false)
+  
+  const signOut = () => {
+    logOut()
+    .then(result => {})
+    .then(error => {})
+  }
+
   const nav = (
     <>
       <li>
@@ -23,9 +33,10 @@ const Navbar = () => {
       <li>
         <NavLink className={({isActive}) => isActive ? "bg-[#865ba5]" : '' } to={`/blog`}>Blogs</NavLink>
       </li>
-     
     </>
   );
+
+
   return (
     <div className="bg-[#bfa0d5]">
         <div className="navbar  max-w-[1240px] mx-auto">
@@ -48,11 +59,15 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
   <div className="avatar placeholder items-center">
-  <h1 className="font-semibold  md:mr-3">Afsar khan</h1>
+  {user ? <>
+    <h1 className={`font-semibold  md:mr-3 ${enter ? 'block' : 'hidden'}`}>{user?.displayName}</h1>
   <div className="bg-neutral-focus text-neutral-content rounded-full w-8">
-   <span className="text-xs">AA</span>
+   <span onMouseEnter={() => setEnter(true)} onMouseLeave={() => setEnter(false)} className="text-xs"><img src={user?.photoURL
+} alt="" /></span>
   </div>
-  <Link to='/login'><button className="btn btn-ghost normal-case">Log out</button></Link>
+  <Link ><button onClick={signOut} className="btn btn-ghost normal-case">Log out</button></Link>
+  </> :  <Link to='/login'><button  className="btn btn-ghost normal-case">Login</button></Link>}
+ 
 </div>
   </div>
 </div>

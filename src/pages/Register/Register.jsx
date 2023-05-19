@@ -33,7 +33,7 @@ const Register = () => {
           //  UPDATE USER NAME AND PICTURE
           updateUser(name, photo)
           .then(result => {
-            console.log('hello')
+            console.log(result)
           })
           .catch(error =>{
             console.log(error)
