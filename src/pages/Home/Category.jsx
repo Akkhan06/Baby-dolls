@@ -2,6 +2,7 @@ import { Card } from "flowbite-react";
 import React, { useState } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
+import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
@@ -56,7 +57,7 @@ const Category = () => {
               />{" "}
               3.5
             </p>
-            <a
+            <Link to={'/details'}
               href="#"
               class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
@@ -74,7 +75,7 @@ const Category = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -105,8 +106,8 @@ const Category = () => {
               />{" "}
               3.5
             </p>
-            <a
-              href="#"
+            <Link to={'/details'}
+              
               class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Read more
@@ -123,7 +124,7 @@ const Category = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -157,8 +158,7 @@ const Category = () => {
               />{" "}
               3.5
             </p>
-            <a
-              href="#"
+            <Link to={'/details'}
               class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Read more
@@ -175,7 +175,7 @@ const Category = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -206,8 +206,7 @@ const Category = () => {
               />{" "}
               3.5
             </p>
-            <a
-              href="#"
+            <Link to={'/details'}
               class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Read more
@@ -224,7 +223,7 @@ const Category = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -258,8 +257,7 @@ const Category = () => {
               />{" "}
               3.5
             </p>
-            <a
-              href="#"
+            <Link to={'/details'}
               class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Read more
@@ -276,7 +274,7 @@ const Category = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -307,8 +305,8 @@ const Category = () => {
               />{" "}
               3.5
             </p>
-            <a
-              href="#"
+            <Link to={'/details'}
+              
               class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Read more
@@ -325,7 +323,7 @@ const Category = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

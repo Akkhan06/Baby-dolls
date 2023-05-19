@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SubHeader = () => {
     return (
@@ -8,7 +9,7 @@ const SubHeader = () => {
         <p class="font-bold text-sm uppercase">Services</p>
         <p class="text-6xl font-bold">Top Toys Trend </p>
         <p class="text-3xl mb-10 leading-none">Multimedia products</p>
-        <button className="btn btn-active bg-purple-800 border-none">Shop now</button>
+        <Link to={'/alltoy'}><button className="btn mt-6 btn-active bg-purple-800 border-none">Shop now</button></Link>
         </div>  
     </div>
     );
