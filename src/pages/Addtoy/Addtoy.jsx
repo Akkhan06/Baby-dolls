@@ -13,9 +13,9 @@ const Addtoy = () => {
     const price = form.price.value;
     const rating = form.rating.value;
     const email = form.email.value;
-    const category = form.category.value;
     const quantity = form.quantity.value;
     const image = form.image.value;
+    const category = form.select.value;
 
     const allInfo = {selername, discription, productName, price, rating, email, category, quantity, image}
 
@@ -319,55 +319,14 @@ const Addtoy = () => {
                 </div>
               </div>
               <div className="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
-                <label
-                  htmlFor="City"
-                  className="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100"
-                >
-                  Category
-                </label>
-                <div className="border border-gray-300 dark:border-gray-700 shadow-sm rounded flex">
-                  <input
-                    type="text"
-                    
-                    name="category"
-                    required
-                    className="pl-3 py-3 w-full text-sm focus:outline-none border border-transparent focus:border-indigo-700 bg-transparent rounded placeholder-gray-500 text-gray-500 dark:text-gray-400"
-                    defaultValue={'dolls'}
-                    
-                  />
-                  <div className="px-4 flex items-center border-l border-gray-300 dark:border-gray-700 flex-col justify-center text-gray-500 dark:text-gray-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="icon icon-tabler icon-tabler-chevron-up"
-                      width={16}
-                      height={16}
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" />
-                      <polyline points="6 15 12 9 18 15" />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="icon icon-tabler icon-tabler-chevron-down"
-                      width={16}
-                      height={16}
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" />
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </div>
-                </div>
+                
+                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Choose a category </label>
+<select name="select" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+  <option selected>Select an option</option>
+  <option value="CSD">Cuddly Soft Dolls</option>
+  <option value="AFD">Animal Friends Dolls</option>
+  <option value="ABD">Adorable Baby Dolls</option>
+</select>
               </div>
               <div className="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
                 <label
