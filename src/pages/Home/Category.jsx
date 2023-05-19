@@ -23,9 +23,9 @@ const Category = () => {
 <h1 className="text-gray-500 my-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, iste.</h1>
 </div>
       <TabList className={'flex justify-center tabs gap-9 tabs-boxed mb-10 bg-warning font-semibold '}>
-        <Tab className="tab text-white" style={{ backgroundColor: selectedTab === 0 ? 'gray' : '' }}>Tab 1</Tab>
-        <Tab className="tab text-white" style={{ backgroundColor: selectedTab === 1 ? 'gray' : '' }}>Tab 2</Tab>
-        <Tab className="tab text-white" style={{ backgroundColor: selectedTab === 2 ? 'gray' : '' }}>Tab 3</Tab>
+        <Tab className="tab text-white" style={{ backgroundColor: selectedTab === 0 ? 'gray' : '' }}>Cuddly Soft Dolls</Tab>
+        <Tab className="tab text-white" style={{ backgroundColor: selectedTab === 1 ? 'gray' : '' }}>Animal Friends Dolls</Tab>
+        <Tab className="tab text-white" style={{ backgroundColor: selectedTab === 2 ? 'gray' : '' }}>Adorable Baby Dolls</Tab>
       </TabList>
 
       <TabPanel>
