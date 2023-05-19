@@ -19,7 +19,8 @@ const Navbar = () => {
         <NavLink className={({isActive}) => isActive ? "bg-[#865ba5]" : '' } to='/'>Home</NavLink>
       </li>
 
-      <li>
+      {
+        user &&<> <li>
         <NavLink className={({isActive}) => isActive ? "bg-[#865ba5]" : '' } to={`/alltoy`}>All toys</NavLink>
       </li>
       <li>
@@ -29,7 +30,8 @@ const Navbar = () => {
 
       <li>
         <NavLink className={({isActive}) => isActive ? "bg-[#865ba5]" : '' } to={`addtoy`}>Add A toy</NavLink>
-      </li>
+      </li> </>
+      }
       <li>
         <NavLink className={({isActive}) => isActive ? "bg-[#865ba5]" : '' } to={`/blog`}>Blogs</NavLink>
       </li>

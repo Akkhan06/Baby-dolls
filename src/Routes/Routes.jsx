@@ -16,6 +16,7 @@ import Mytoy from '../pages/Mytoy/Mytoy';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import Details from '../pages/Details/Details';
 import UpdateToy from '../pages/UpdateToy/UpdateToy';
+import PrivateRoutes from '../PrivateRoutes/PrivateRoutes';
  
 const router = createBrowserRouter([
     {
@@ -53,11 +54,11 @@ const router = createBrowserRouter([
         },
         {
           path: "details",
-          element: <Details></Details>
+          element: <PrivateRoutes><Details/></PrivateRoutes>
         },
         {
           path: 'edit',
-          element: <UpdateToy></UpdateToy>
+          element: <PrivateRoutes><UpdateToy></UpdateToy></PrivateRoutes>
         }
       ]
     },
