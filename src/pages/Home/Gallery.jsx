@@ -8,7 +8,7 @@ const Gallery = () => {
     <div class="grid  w-11/12 mx-auto grid-cols-2 md:grid-cols-4 gap-4 mt-14">
     <div class="grid gap-4">
         <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://img.freepik.com/free-vector/sticker-set-with-hand-puppets-illustration_1308-2630.jpg?w=360&t=st=1684498009~exp=1684498609~hmac=0273454ad17e1770c29aaec54f8d0709fcdd9abdcd4ff9acd46bd7819dd84935" alt=""/>
+            <img class="h-auto max-w-full rounded-lg" src="https://as2.ftcdn.net/v2/jpg/05/12/21/43/1000_F_512214358_hN9kHWG4vR3KWVq9kn9uPRheqjSCAhiX.jpg" alt=""/>
         </div>
 
 

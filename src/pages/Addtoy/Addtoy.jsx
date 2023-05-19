@@ -1,165 +1,50 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-
-//     <div className="md:w-[840px] mx-auto">
-//       <form>
-
-//        <div className=""> <div class="mb-6">
-//           <label
-//             for="email"
-//             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-//           >
-//             Product Url
-//           </label>
-//           <input
-//             type="text"
-//             name="url"
-//             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-//             required
-//           />
-//         </div>
-//         <div class="mb-6">
-//           <label
-//             for="password"
-//             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-//           >
-//             Product name
-//           </label>
-//           <input
-//             type="text"
-//             name="productName"
-//             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-//             required
-//           />
-//         </div>
-
-//         <div class="mb-6">
-//           <label
-//             for="password"
-//             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-//           >
-//             Seller name
-//           </label>
-//           <input
-//             type="text"
-//             name="name"
-//             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-//             required
-//           />
-//         </div></div>
-
-//         <div class="mb-6">
-//           <label
-//             for="password"
-//             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-//           >
-//             Seller email
-//           </label>
-//           <input
-//             type="email"
-//             name="email"
-//             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-//             required
-//           />
-//         </div>
-
-//         <div className="">
-// <div className="mb-6">
-//         <label
-//           for="countries"
-//           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-//         >
-//           Category
-//         </label>
-//         <select
-//           id="countries"
-//           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-//         >
-//           <option>Canada</option>
-//           <option>France</option>
-//           <option>Germany</option>
-//         </select>
-//         </div>
-
-//         <div class="mb-6">
-//           <label
-//             for="password"
-//             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-//           >
-//            Price
-//           </label>
-//           <input
-//             type="text"
-//             name="price"
-//             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-//             required
-//           />
-//         </div>
-//         <div class="mb-6">
-//           <label
-//             for="password"
-//             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-//           >
-//            Rating
-//           </label>
-//           <input
-//             type="text"
-//             name="raging"
-//             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-//             required
-//           />
-//         </div>
-//         <div class="mb-6">
-//           <label
-
-//             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-//           >
-//            Quantity
-//           </label>
-//           <input
-//             type="text"
-//             name="quantity"
-//             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-//             required
-//           />
-//         </div>
-//         </div>
-
-//         <div class="relative z-0 col-span-2">
-
-//         <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-//                   Your message
-//                 </label>
-
-//                 <textarea
-//                   name="message"
-//                   rows="5"
-//                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-//                   placeholder=" "
-//                 ></textarea>
-
-//               </div>
-
-//         <button
-//           type="submit"
-//           class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-//         >
-//           Submit
-//         </button>
-//       </form>
-//     </div>
+import Swal from "sweetalert2";
 
 const Addtoy = () => {
-  let form = useRef(null);
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const form_data = new FormData(form.current);
-    let payload = {};
-    form_data.forEach(function (value, key) {
-      payload[key] = value;
-    });
-    // console.log("payload", payload);
-    // Place your API call here to submit your payload.
+    const form = event.target;
+    const selername = form.selername.value;
+    const discription = form.discription.value;
+    const productName = form.productName.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    const email = form.email.value;
+    const category = form.category.value;
+    const quantity = form.quantity.value;
+    const image = form.image.value;
+
+    const allInfo = {selername, discription, productName, price, rating, email, category, quantity, image}
+
+    Swal.fire({
+      title: 'Do you want to save the add item?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Add',
+      denyButtonText: `Don't add`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire('Saved!', '', 'success')
+
+        
+          fetch('http://localhost:5000/alltoys', {
+            method: "POST",
+            headers: {
+              "content-type": "application/json"
+            },
+            body: JSON.stringify(allInfo)
+          }).then(res => res.json()).then(data => {
+    console.log(data)
+          })
+      } else if (result.isDenied) {
+        Swal.fire('Changes are not saved', '', 'info')
+      }
+    })
+
   };
   return (
     <form id="login" onSubmit={handleSubmit}>
@@ -220,11 +105,12 @@ const Addtoy = () => {
                 </label>
                 <input
                   type="text"
-                  id="username"
-                  name="username"
+                 
+                  name="selername"
                   required
                   className="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-indigo-700 bg-transparent placeholder-gray-500 text-gray-500 dark:text-gray-400"
-                  placeholder="@example"
+                  placeholder
+                  defaultValue={'afsar khan'}
                 />
               </div>
               <div className="mt-8 flex flex-col xl:w-3/5 lg:w-1/2 md:w-1/2 w-full">
@@ -235,13 +121,13 @@ const Addtoy = () => {
                   Discription
                 </label>
                 <textarea
-                  id="about"
-                  name="about"
+                  
+                  name="discription"
                   required
                   className="bg-transparent border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-indigo-700 resize-none placeholder-gray-500 text-gray-500 dark:text-gray-400"
-                  placeholder="Let the world know who you are"
+                  
                   rows={5}
-                  defaultValue={""}
+                  defaultValue={"hello kamon acen sovai"}
                 />
                 <p className="w-full text-right text-xs pt-1 text-gray-500 dark:text-gray-400">
                   Character Limit: 200
@@ -288,6 +174,7 @@ const Addtoy = () => {
                   required
                   className="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm bg-transparent rounded text-sm focus:outline-none focus:border-indigo-700 placeholder-gray-500 text-gray-500 dark:text-gray-400"
                   placeholder
+                  defaultValue={'dolls'}
                 />
               </div>
               <div className="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
@@ -304,6 +191,7 @@ const Addtoy = () => {
                   required
                   className="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm bg-transparent rounded text-sm focus:outline-none focus:border-indigo-700 placeholder-gray-500 text-gray-500 dark:text-gray-400"
                   placeholder
+                  defaultValue={3}
                 />
               </div>
               <div className="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
@@ -339,6 +227,7 @@ const Addtoy = () => {
                     required
                     className="pl-3 py-3 w-full text-sm focus:outline-none placeholder-gray-500 rounded bg-transparent text-gray-500 dark:text-gray-400"
                     placeholder="example@gmail.com"
+                    defaultValue={'ak01648065092@gmail.com'}
                   />
                 </div>
                 <div className="flex justify-between items-center pt-1 text-green-400">
@@ -376,7 +265,58 @@ const Addtoy = () => {
                   required
                   className="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded bg-transparent text-sm focus:outline-none focus:border-indigo-700 placeholder-gray-500 text-gray-500 dark:text-gray-400"
                   placeholder
+                  defaultValue={5}
                 />
+              </div>
+              <div className="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+                <label
+                  htmlFor="City"
+                  className="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100"
+                >
+                  Product image
+                </label>
+                <div className="border border-gray-300 dark:border-gray-700 shadow-sm rounded flex">
+                  <input
+                    type="text"
+                    
+                    name="image"
+                    required
+                    className="pl-3 py-3 w-full text-sm focus:outline-none border border-transparent focus:border-indigo-700 bg-transparent rounded placeholder-gray-500 text-gray-500 dark:text-gray-400"
+                    defaultValue={'https://img.freepik.com/free-vector/little-cute-girl-holding-teddy-bear_1308-115895.jpg?w=360&t=st=1684507206~exp=1684507806~hmac=1f4053f20302a4209b5d24f3363d0e7955b4dd681eca9263f460d3969ccaad79'}
+                  />
+                  <div className="px-4 flex items-center border-l border-gray-300 dark:border-gray-700 flex-col justify-center text-gray-500 dark:text-gray-400">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="icon icon-tabler icon-tabler-chevron-up"
+                      width={16}
+                      height={16}
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" />
+                      <polyline points="6 15 12 9 18 15" />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="icon icon-tabler icon-tabler-chevron-down"
+                      width={16}
+                      height={16}
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" />
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </div>
+                </div>
               </div>
               <div className="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
                 <label
@@ -392,6 +332,7 @@ const Addtoy = () => {
                     name="category"
                     required
                     className="pl-3 py-3 w-full text-sm focus:outline-none border border-transparent focus:border-indigo-700 bg-transparent rounded placeholder-gray-500 text-gray-500 dark:text-gray-400"
+                    defaultValue={'dolls'}
                     
                   />
                   <div className="px-4 flex items-center border-l border-gray-300 dark:border-gray-700 flex-col justify-center text-gray-500 dark:text-gray-400">
@@ -441,6 +382,7 @@ const Addtoy = () => {
                   name="quantity"
                   required
                   className="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm bg-transparent rounded text-sm focus:outline-none focus:border-indigo-700 placeholder-gray-500 text-gray-500 dark:text-gray-400"
+                  defaultValue={5}
                   
                 />
               </div>

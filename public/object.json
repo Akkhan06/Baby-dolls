@@ -1,0 +1,72 @@
+[
+  {
+    "Picture": "https://img.freepik.com/free-photo/fluffy-toy-texture-close-up_23-2149686921.jpg?w=1380&t=st=1684396367~exp=1684396967~hmac=1aea70aa84d6fe5efb400583cd1a109b01c70cd53c3d841c6369e6923720f053",
+    "Name": "Beautiful Doll 1",
+    "Price": 19.99,
+    "Rating": 4.5,
+    "categoryId": "1"
+  },
+  {
+    "Picture": "https://img.freepik.com/free-photo/fluffy-toy-texture-close-up_23-2149686921.jpg?w=1380&t=st=1684396367~exp=1684396967~hmac=1aea70aa84d6fe5efb400583cd1a109b01c70cd53c3d841c6369e6923720f053",
+    "Name": "Beautiful Doll 2",
+    "Price": 24.99,
+    "Rating": 4.2,
+    "categoryId": "1"
+  },
+  {
+    "Picture": "https://img.freepik.com/free-photo/fluffy-toy-texture-close-up_23-2149686921.jpg?w=1380&t=st=1684396367~exp=1684396967~hmac=1aea70aa84d6fe5efb400583cd1a109b01c70cd53c3d841c6369e6923720f053",
+    "Name": "Beautiful Doll 3",
+    "Price": 29.99,
+    "Rating": 4.7,
+
+    "categoryId": "1"
+  },
+  {
+    "Picture": "https://img.freepik.com/free-photo/fluffy-toy-texture-close-up_23-2149686921.jpg?w=1380&t=st=1684396367~exp=1684396967~hmac=1aea70aa84d6fe5efb400583cd1a109b01c70cd53c3d841c6369e6923720f053",
+    "Name": "Beautiful Doll 4",
+    "Price": 34.99,
+    "Rating": 4.1,
+
+    "categoryId": "2"
+  },
+  {
+    "Picture": "https://img.freepik.com/free-photo/fluffy-toy-texture-close-up_23-2149686921.jpg?w=1380&t=st=1684396367~exp=1684396967~hmac=1aea70aa84d6fe5efb400583cd1a109b01c70cd53c3d841c6369e6923720f053",
+    "Name": "Beautiful Doll 5",
+    "Price": 39.99,
+    "Rating": 4.8,
+
+    "categoryId": "2"
+  },
+  {
+    "Picture": "https://img.freepik.com/free-photo/fluffy-toy-texture-close-up_23-2149686921.jpg?w=1380&t=st=1684396367~exp=1684396967~hmac=1aea70aa84d6fe5efb400583cd1a109b01c70cd53c3d841c6369e6923720f053",
+    "Name": "Beautiful Doll 6",
+    "Price": 44.99,
+    "Rating": 4.4,
+
+    "categoryId": "2"
+  },
+  {
+    "Picture": "https://img.freepik.com/free-photo/fluffy-toy-texture-close-up_23-2149686921.jpg?w=1380&t=st=1684396367~exp=1684396967~hmac=1aea70aa84d6fe5efb400583cd1a109b01c70cd53c3d841c6369e6923720f053",
+    "Name": "Beautiful Doll 7",
+    "Price": 49.99,
+    "Rating": 4.6,
+
+    "categoryId": "3"
+  },
+  {
+    "Picture": "https://img.freepik.com/free-photo/fluffy-toy-texture-close-up_23-2149686921.jpg?w=1380&t=st=1684396367~exp=1684396967~hmac=1aea70aa84d6fe5efb400583cd1a109b01c70cd53c3d841c6369e6923720f053",
+    "Name": "Beautiful Doll 8",
+    "Price": 54.99,
+    "Rating": 4.3,
+
+    "categoryId": "3"
+  },
+  {
+    "Picture": "https://img.freepik.com/free-photo/fluffy-toy-texture-close-up_23-2149686921.jpg?w=1380&t=st=1684396367~exp=1684396967~hmac=1aea70aa84d6fe5efb400583cd1a109b01c70cd53c3d841c6369e6923720f053",
+    "Name": "Beautiful Doll 9",
+    "Price": 59.99,
+    "Rating": 4.9,
+
+    "categoryId": "3"
+  }
+]
