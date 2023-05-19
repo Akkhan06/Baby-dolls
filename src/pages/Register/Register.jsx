@@ -1,9 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.jpg'
+import { AuthContext } from '../../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Register = () => {
-
+  const {createUser, updateUser} = useContext(AuthContext)
+  const navigate = useNavigate()
 
     const signUpHandler = event => {
         event.preventDefault()
@@ -12,10 +15,35 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const photo = form.photo.value;
-
         const userInfo = {name, email, password, photo}
-
         console.log(userInfo)
+
+        createUser(email, password)
+        // CREATE USER THAN START
+        .then(result => {
+          const user = result.user
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Account created',
+            showConfirmButton: false,
+            timer: 1500
+          })
+          navigate('/login')
+          //  UPDATE USER NAME AND PICTURE
+          updateUser(name, photo)
+          .then(result => {
+            console.log('hello')
+          })
+          .catch(error =>{
+            console.log(error)
+          })
+        })
+        // CREATE USER THAN END
+        .catch(error => {
+          console.log(error)
+        })
+        
     }
 
     return (
@@ -40,10 +68,10 @@ const Register = () => {
               </label>
               <div className="mt-2">
                 <input
-                  id="email"
+                 
                   name="name"
                   type="text"
-                  autoComplete="email"
+                 
                   required
                   className="block p-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
@@ -59,7 +87,7 @@ const Register = () => {
                   
                   name="email"
                   type="email"
-                  autoComplete="email"
+                  
                   required
                   className="block p-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
