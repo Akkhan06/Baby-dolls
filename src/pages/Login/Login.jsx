@@ -8,7 +8,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 
 const Login = () => {
-  const { loginUser, user } = useContext(AuthContext);
+  const { loginUser, user , loginGoogle} = useContext(AuthContext);
   const location = useLocation();
   const from = location.state?.from.pathname || "/";
 
@@ -38,6 +38,19 @@ const Login = () => {
         console.log(error)
       });
   };
+
+  const googleLogin = () => {
+    loginGoogle().then(result => {
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Login success",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      navigate(from)
+    }).then(error => {console.log(error)})
+  }
 
   const [sidebar, setsidebar] = useState();
   return (
@@ -153,7 +166,7 @@ const Login = () => {
                 <Link to={"/register"}>Sign up here</Link>
               </span>
             </p>
-            <button
+            <button onClick={googleLogin}
               aria-label="Continue with google"
               role="button"
               className="focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-3.5 px-4 border rounded-lg border-gray-700 flex items-center w-full mt-10"
