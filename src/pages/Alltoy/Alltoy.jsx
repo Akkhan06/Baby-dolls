@@ -1,5 +1,6 @@
 import React from "react";
 import { FaEdgeLegacy, FaRegTrashAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Alltoy = () => {
   return (
@@ -120,9 +121,9 @@ const Alltoy = () => {
 </td>
               <td>$ 40</td>
               <th>
-                <button className="btn btn-ghost btn-xs bg-[#bfa0d5] text-white">
+                <Link to={'/details'}><button className="btn btn-ghost btn-xs bg-[#bfa0d5] text-white">
                   view details
-                </button>
+                </button></Link>
               </th>
             </tr>
 

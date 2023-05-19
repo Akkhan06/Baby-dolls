@@ -29,7 +29,7 @@ const Category = () => {
       </TabList>
 
       <TabPanel>
-      <div className="flex justify-center gap-6">
+      <div className="grid grid-cols-1 w-11/12 md:w-auto mx-auto  md:grid-cols-3 justify-center gap-6">
       <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <a href="#">
             <img
@@ -179,7 +179,7 @@ const Category = () => {
       </div>
       </TabPanel>
       <TabPanel>
-      <div className="flex justify-center gap-6">
+      <div className="grid grid-cols-1 w-11/12 md:w-auto mx-auto md:grid-cols-3 justify-center gap-6">
       <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <a href="#">
             <img
@@ -327,7 +327,7 @@ const Category = () => {
       </div>
       </TabPanel>
       <TabPanel>
-      <div className="flex justify-center gap-6">
+      <div className="grid grid-cols-1 w-11/12 md:w-auto mx-auto  md:grid-cols-3 justify-center gap-6">
       <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <a href="#">
             <img

@@ -55,7 +55,7 @@ const Navbar = () => {
     <h1 className="ml-3 text-white hidden md:block">Baby Dolls</h1></a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1 text-[10px] font-semibold text-white normal-case ">
+    <ul className="menu menu-horizontal px-1 text-[20px] font-semibold text-white normal-case ">
       {nav}
     </ul>
   </div>
