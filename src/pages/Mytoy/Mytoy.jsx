@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaRegTrashAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Mytoy = () => {
     return (
@@ -80,9 +81,9 @@ const Mytoy = () => {
 </td>
               <td>$ 40</td>
               <th>
-                <button className="btn btn-ghost btn-xs bg-[#bfa0d5] text-white">
+                <Link to={'/edit'}><button className="btn btn-ghost btn-xs bg-[#bfa0d5] text-white">
                   Edit
-                </button>
+                </button></Link>
               </th>
             </tr>
 
