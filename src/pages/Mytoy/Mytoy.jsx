@@ -12,10 +12,8 @@ const Mytoy = () => {
   useEffect(() => {
     fetch(`http://localhost:5000/alltoys_email/${user?.email}`)
     .then(res => res.json())
-    .then(data => {
-      setToy(data)
-    })
-  }, [user])
+    .then(data => setToy(data))
+  }, [user?.email])
 
   const handleDelete = _id => {
     console.log(_id);

@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Category from '../Home/Category';
 
 const AlltoyCard = ({pd}) => {
-    const  {selername, discription, productName, price, rating, email, category, quantity, image} = pd
-    
+    const  {selername, discription, productName, price, rating, email, category, quantity, image, _id} = pd
     return (
         <tr>
               <th>
@@ -55,9 +54,9 @@ const AlltoyCard = ({pd}) => {
                 </span>
               </td>
               <td>in stok {quantity}</td>
-              <td>$ 40</td>
+              <td>$ {price}</td>
               <th>
-                <Link to={"/details"}>
+                <Link to={`/details/${_id}`}>
                   <button className="btn btn-ghost btn-xs bg-[#bfa0d5] text-white">
                     view details
                   </button>

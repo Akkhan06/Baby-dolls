@@ -53,7 +53,7 @@ const MyToyCard = ({pd, handleDelete}) => {
                 </span>
               </td>
               <td>in stok {quantity}</td>
-              <td>$ 40</td>
+              <td>${price}</td>
               <th>
                 <Link to={`/edit/${_id}`}>
                   <button className="btn btn-ghost btn-xs bg-[#bfa0d5] text-white">
