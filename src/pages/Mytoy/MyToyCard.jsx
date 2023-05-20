@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MyToyCard = ({pd}) => {
-    const  {selername, discription, productName, price, rating, email, category, quantity, image} = pd
+const MyToyCard = ({pd, handleDelete}) => {
+    const  {selername, discription, productName, price, rating, email, category, quantity, image, _id} = pd
     return (
         <tr>
               <th>
                 <label>
-                  <button className="btn btn-xs rounded-full">
+                  <button onClick={() => handleDelete(_id)} className="btn btn-xs rounded-full">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-4 w-4"
@@ -55,7 +55,7 @@ const MyToyCard = ({pd}) => {
               <td>in stok {quantity}</td>
               <td>$ 40</td>
               <th>
-                <Link to={"/edit"}>
+                <Link to={`/edit/${_id}`}>
                   <button className="btn btn-ghost btn-xs bg-[#bfa0d5] text-white">
                     Edit
                   </button>

@@ -3,6 +3,7 @@ import { FaRegTrashAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import MyToyCard from './MyToyCard';
+import Swal from 'sweetalert2';
 
 const Mytoy = () => {
   const {user} = useContext(AuthContext)
@@ -15,6 +16,40 @@ const Mytoy = () => {
       setToy(data)
     })
   }, [user])
+
+  const handleDelete = _id => {
+    console.log(_id);
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+
+
+            fetch(`http://localhost:5000/alltoys_email/${_id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        Swal.fire(
+                            'Deleted!',
+                            'Your Coffee has been deleted.',
+                            'success'
+                        )
+                        const remaining = toy.filter(cof => cof._id !== _id);
+                        setToy(remaining);
+                    }
+                })
+
+        }
+    })
+}
 
     return (
         <div className="md:max-w-[1240px] mx-auto">
@@ -41,7 +76,7 @@ const Mytoy = () => {
           <tbody>
             {/* row 1 */}
             {
-              toy?.map(pd => <MyToyCard pd={pd} key={pd._id}></MyToyCard>)
+              toy?.map(pd => <MyToyCard pd={pd} handleDelete={handleDelete} key={pd._id}></MyToyCard>)
             }
           </tbody>
         </table>

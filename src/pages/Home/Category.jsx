@@ -21,10 +21,11 @@ const Category = () => {
       .then(res => res.json())
       .then(data => {
         if (data.length >= 3) {
-          const subData = data.slice(0, 2 )
+          const subData = data.slice(0, 3)
           setSubData2(subData)
+        }else{
+          setSubData2(data)
         }
-        setSubData2(data)
       })
     },[subData])
 
