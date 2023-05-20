@@ -4,30 +4,30 @@ import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 
 const SubCard = ({x}) => {
-    // const {Picture, Name, Price, Rating} =x
+    const {selername, discription, productName, price, rating, email, category, quantity, image} =x
     return (
         <div>
              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <a href="#">
             <img
-              class="rounded-t-lg"
-              src="https://img.freepik.com/free-photo/fluffy-toy-texture-close-up_23-2149686921.jpg?w=1380&t=st=1684396367~exp=1684396967~hmac=1aea70aa84d6fe5efb400583cd1a109b01c70cd53c3d841c6369e6923720f053"
+              class="rounded-t-lg h-72 md:h-96 mx-auto"
+              src={image}
               alt=""
             />
           </a>
-          <div class="p-5">
+          <div class="p-5 border-t">
             <a href="#">
               <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Noteworthy technology acquisitions 2021
+                {productName}
               </h5>
             </a>
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 font-semibold">
-              Price $30
+              Price ${price}
             </p>
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
               <Rating
                 className="text-warning"
-                placeholderRating={3.5}
+                placeholderRating={rating}
                 emptySymbol={<FaRegStar />}
                 placeholderSymbol={<FaStar />}
                 fullSymbol={<FaStar />}
