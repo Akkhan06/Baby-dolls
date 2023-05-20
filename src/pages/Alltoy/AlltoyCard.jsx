@@ -43,7 +43,7 @@ const AlltoyCard = ({pd}) => {
               <td>
                 <div>
                   <div className="font-bold">{productName}</div>
-                  <div className="text-sm opacity-50">United States</div>
+                  <div className="text-sm opacity-50">discription: {discription.length > 15 ? discription.slice(0, 15) : discription}</div>
                 </div>
               </td>
               <td>

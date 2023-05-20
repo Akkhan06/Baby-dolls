@@ -42,7 +42,7 @@ const MyToyCard = ({pd, handleDelete}) => {
               <td>
                 <div>
                   <div className="font-bold">{productName}</div>
-                  <div className="text-sm opacity-50">United States</div>
+                  <div className="text-sm opacity-50">discription: {discription.length > 15 ? discription.slice(0, 15) : discription}</div>
                 </div>
               </td>
 
@@ -59,7 +59,7 @@ const MyToyCard = ({pd, handleDelete}) => {
                   Desktop Support Technician
                 </span>
               </td>
-              
+
               <td>in stok {quantity}</td>
               <td>${price}</td>
               <th>
@@ -69,6 +69,7 @@ const MyToyCard = ({pd, handleDelete}) => {
                   </button>
                 </Link>
               </th>
+              
             
         </tr>
     );
