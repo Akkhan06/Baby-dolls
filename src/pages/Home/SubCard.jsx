@@ -31,8 +31,8 @@ const SubCard = ({x}) => {
                 emptySymbol={<FaRegStar />}
                 placeholderSymbol={<FaStar />}
                 fullSymbol={<FaStar />}
-              />{" "}
-              3.5
+              />{rating}
+              
             </p>
             <Link to={'/details'}
               href="#"

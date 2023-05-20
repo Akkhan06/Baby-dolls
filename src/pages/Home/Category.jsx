@@ -19,7 +19,13 @@ const Category = () => {
     useEffect(() => {
       fetch(`http://localhost:5000/alltoys/${subData}`)
       .then(res => res.json())
-      .then(data => setSubData2(data))
+      .then(data => {
+        if (data.length >= 3) {
+          const subData = data.slice(0, 2 )
+          setSubData2(subData)
+        }
+        setSubData2(data)
+      })
     },[subData])
 
       const filterItems = id => {
@@ -47,7 +53,7 @@ const Category = () => {
 
 
       {
-        subData2.map(x => <SubCard key={x._id} x={x}></SubCard>)
+        subData2?.map(x => <SubCard key={x._id} x={x}></SubCard>)
       }
 
       </div>
@@ -55,7 +61,7 @@ const Category = () => {
       <TabPanel>
       <div className="grid grid-cols-1 w-11/12 md:w-auto mx-auto md:grid-cols-3 justify-center gap-6">
       {
-        subData2.map(x => <SubCard key={x._id} x={x}></SubCard>)
+         subData2?.map(x => <SubCard key={x._id} x={x}></SubCard>)
       }
       </div>
       </TabPanel>
