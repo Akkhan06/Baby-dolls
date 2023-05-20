@@ -28,9 +28,6 @@ const Alltoy = () => {
       .then((data) => setData(data))   
   }
 
-
-
-  console.log(alldata);
   return (
     <div className="md:max-w-[1240px] mx-auto">
       <div className="my-6">

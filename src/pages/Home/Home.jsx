@@ -13,8 +13,8 @@ const Home = () => {
 
     return (
         <div>
-            <Banner data-aos='fade-up'></Banner>
-            <Gallery data-aos='fade-up'></Gallery>
+            <Banner></Banner>
+            <Gallery></Gallery>
             <Category></Category>
             <SubHeader></SubHeader>
             <Team></Team>
