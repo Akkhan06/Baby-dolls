@@ -6,14 +6,16 @@ import MyToyCard from './MyToyCard';
 
 const Mytoy = () => {
   const {user} = useContext(AuthContext)
+  
   const [toy, setToy] = useState([])
   useEffect(() => {
-    fetch(`http://localhost:5000/alltoys/${user?.email}`)
+    fetch(`http://localhost:5000/alltoys_email/${user?.email}`)
     .then(res => res.json())
     .then(data => {
       setToy(data)
     })
   }, [user])
+
     return (
         <div className="md:max-w-[1240px] mx-auto">
       <div className="my-6">

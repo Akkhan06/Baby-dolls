@@ -17,7 +17,7 @@ const Category = () => {
     const [subData2, setSubData2] = useState([])
 
     useEffect(() => {
-      fetch(`http://localhost:5000/alltoys/${subData}`)
+      fetch(`http://localhost:5000/alltoys_text/${subData}`)
       .then(res => res.json())
       .then(data => {
         if (data.length >= 3) {

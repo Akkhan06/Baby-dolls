@@ -2,6 +2,18 @@ import React from 'react';
 
 
 const UpdateToy = () => {
+  const updateHandelr = event => {
+    event.preventDefault()
+    const form = event.target;
+    const price = form.price.value;
+    const quantity = form.quantity.value;
+    const about = form.about.value;
+
+    const updateInfo = {price, quantity, about}
+
+    fetch(`http://localhost:5000/alltoys_one/${id}`)
+
+  }
     return (
         <div>
              <div>
