@@ -86,6 +86,7 @@ const Alltoy = () => {
               </th>
               <th>{alldata.length}</th>
               <th>Toy name</th>
+              <th>Seller Name</th>
               <th>Category</th>
               <th>Quantity</th>
               <th>Price</th>

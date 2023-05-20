@@ -47,7 +47,13 @@ const AlltoyCard = ({pd}) => {
                 </div>
               </td>
               <td>
-                {category}
+                <div>
+                  <div className="font-semibold">{selername ? selername: ''}</div>
+                 
+                </div>
+              </td>
+              <td>
+                {category == "csd" && 'Cuddly Soft Dolls' || category == 'afd' && 'Animal Friends Dolls' || category == 'afd' && 'Adorable Baby Dolls' || 'none select'  }
                 <br />
                 <span className="badge badge-ghost badge-sm">
                   Desktop Support Technician
