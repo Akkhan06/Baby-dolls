@@ -5,14 +5,30 @@ import AlltoyCard from "./AlltoyCard";
 
 const Alltoy = () => {
   const [alldata, setData] = useState([]);
+  const [alldata2, setData2] = useState([]);
+  const url = 'http://localhost:5000/alltoys'
 
   useEffect(() => {
-    fetch("http://localhost:5000/alltoys")
+    fetch(url)
       .then((res) => res.json())
-      .then((data) => setData(data));
-  }, []);
+      .then((data) => {
+        setData2(data)
+        if (data.length >= 20) {
+          const sortData = data.slice(0, 20)
+          setData(sortData)
+        }else{
+          setData(data)
+        }
+      });
+  }, [url]);
 
-  
+  const seeAllData = () => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setData(data))   
+  }
+
+
 
   console.log(alldata);
   return (
@@ -71,7 +87,7 @@ const Alltoy = () => {
                   <FaRegTrashAlt />
                 </label>
               </th>
-              <th></th>
+              <th>{alldata.length}</th>
               <th>Toy name</th>
               <th>Category</th>
               <th>Quantity</th>
@@ -87,8 +103,13 @@ const Alltoy = () => {
             }
              
           </tbody>
+          
         </table>
+       <div className="flex justify-center py-5 border-t-2">
+       <button onClick={seeAllData} className={`btn btn-success ${alldata2.length > 20 ? '' : 'hidden'} ${alldata.length > 20 ? 'hidden' : ''}`}>See all</button>
+       </div>
       </div>
+      
     </div>
   );
 };
