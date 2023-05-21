@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SubCard = ({x}) => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS in the component
+  }, []);
     const {selername, _id, discription, productName, price, rating, email, category, quantity, image} =x
     return (
-        <div>
+        <div data-aos="fade-up">
              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <a href="#">
             <img

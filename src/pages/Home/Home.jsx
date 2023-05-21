@@ -6,16 +6,20 @@ import SubHeader from './SubHeader';
 import Team from './Team';
 import Contacts from './Contacts';
 import setTitle from '../../hook/TitleHook';
-
+// import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const Home = () => {
-// Initialize AOS
+    useEffect(() => {
+        AOS.init({ duration: 1000 }); // Initialize AOS in the component
+      }, []);
 setTitle('Home')
     return (
         <div>
             <Banner></Banner>
-            <Gallery></Gallery>
+            <Gallery data-aos="fade-up"></Gallery>
             <Category></Category>
             <SubHeader></SubHeader>
             <Team></Team>

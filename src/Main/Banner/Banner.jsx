@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+    
 
 const Banner = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS in the component
+  }, []);
     return (
-        <div className="carousel w-full md:h-[600px] rounded-xl ">
+        <div data-aos="fade-up" className="carousel w-full md:h-[600px] rounded-xl ">
         <div id="slide1" className="carousel-item relative w-full rounded-xl ">
-          <img src='https://img.freepik.com/free-vector/plain-background-with-little-girl-jumping_1308-42197.jpg?w=1380&t=st=1684383844~exp=1684384444~hmac=9b35d9f29e1c9ce84befcf8732a0e0eaa985cb795f681c9fef639cbf9edd6123' className="w-full" />
+          <img data-aos="fade-up-right" src='https://img.freepik.com/free-vector/plain-background-with-little-girl-jumping_1308-42197.jpg?w=1380&t=st=1684383844~exp=1684384444~hmac=9b35d9f29e1c9ce84befcf8732a0e0eaa985cb795f681c9fef639cbf9edd6123' className="w-full" />
           <div className="absolute md:w-3/4 mx-auto text-white h-full flex items-center right-0 left-0 ">
             <div className="md:w-1/3 ml-10"><h2 className="text-2xl md:text-5xl font-bold">A Wonderland of Baby Dolls</h2> 
             <p className="py-4 w-2/3 md:w-auto">A Wonderland of Baby Dolls: Step into a whimsical realm where enchanting and lifelike baby dolls await</p>

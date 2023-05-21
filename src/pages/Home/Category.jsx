@@ -6,8 +6,12 @@ import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import SubCard from "./SubCard";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Category = () => {
+
+
     const [selectedTab, setSelectedTab] = useState(0);
     const handleTabSelect = (index) => {
       setSelectedTab(index);

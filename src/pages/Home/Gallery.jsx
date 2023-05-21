@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaCarSide, FaGift, FaHeadset, FaMoneyCheckAlt } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Gallery = () => {
+    
+    useEffect(() => {
+        AOS.init({ duration: 1000 }); // Initialize AOS in the component
+      }, []);
   return (
    <>
    <h1 className="text-center text-5xl font-bold mt-20 pb-5 border-b-2">Out Products Gallery</h1>
-    <div class="grid  w-11/12 mx-auto grid-cols-2 md:grid-cols-4 gap-4 mt-14">
+    <div data-aos="fade-up" class="grid  w-11/12 mx-auto grid-cols-2 md:grid-cols-4 gap-4 mt-14">
     <div class="grid gap-4">
         <div>
             <img class="h-auto max-w-full rounded-lg" src="https://as2.ftcdn.net/v2/jpg/05/12/21/43/1000_F_512214358_hN9kHWG4vR3KWVq9kn9uPRheqjSCAhiX.jpg" alt=""/>
