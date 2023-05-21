@@ -4,6 +4,7 @@ import Category from '../Home/Category';
 
 const AlltoyCard = ({pd}) => {
     const  {selername, discription, productName, price, rating, email, category, quantity, image, _id} = pd
+    
     return (
         <tr>
               <th>

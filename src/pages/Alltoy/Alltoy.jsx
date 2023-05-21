@@ -7,44 +7,42 @@ import setTitle from "../../hook/TitleHook";
 
 const Alltoy = () => {
   setTitle('All toys')
-  const [alldata, setData] = useState([]);
-  const [alldata2, setData2] = useState([]);
-  const url = 'https://testtt-akkhan06.vercel.app/alltoys'
+
+  const [alldata, setData] = useState([]); 
 
   useEffect(() => {
-    fetch(url)
+    fetch('https://testtt-akkhan06.vercel.app/alltoys')
       .then((res) => res.json())
-      .then((data) => {
-        setData2(data)
-        if (data.length >= 20) {
-          const sortData = data.slice(0, 20)
-          setData(sortData)
-        }else{
-          setData(data)
-        }
-      });
-  }, [url]);
-
-  const seeAllData = () => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setData(data))   
-  }
+      .then((data) => setData(data));
+  }, []);
+  
 
 const search = (e) => {
         e.preventDefault()
-        
-        fetch(`https://testtt-akkhan06.vercel.app/search?query=${e.target.search.value}`)
+        console.log(e.target.value)
+        fetch(`https://testtt-akkhan06.vercel.app/search/${e.target.value}`)
         .then(res => res.json())
         .then(data => setData(data))
-        console.log(e.target.search.value)
+        
     }
 
+    const [searchTerm, setSearchTerm] = useState('');
+    const [searchResult, setSearchResult] = useState([]);
+
+  
+    const handleSearch = async () => {
+      try {
+        const response = await axios.get(`/search?name=${searchTerm}`);
+        setSearchResult(response.data);
+      } catch (error) {
+        console.error('Error occurred:', error);
+      }
+    }
 
   return (
     <div className="md:max-w-[1240px] mx-auto">
       <div className="my-6">
-        <form onChange={search} >
+        <form  >
           <label 
             for="default-search"
             className="mb-2 text-sm  font-medium text-gray-900 sr-only dark:text-white"
@@ -70,6 +68,7 @@ const search = (e) => {
               </svg>
             </div>
             <input
+            onChange={(e) => search(e)}
               type="search"
               name="search"
               id="default-search"
@@ -81,7 +80,7 @@ const search = (e) => {
               type="submit"
               className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
-              
+              Search
             </button>
           </div>
         </form>
@@ -117,13 +116,11 @@ const search = (e) => {
           </tbody>
           
         </table>
-       <div className="flex justify-center py-5 border-t-2">
-       <button onClick={seeAllData} className={`btn btn-success ${alldata2.length > 20 ? '' : 'hidden'} ${alldata.length > 20 ? 'hidden' : ''}`}>See all</button>
-       </div>
       </div>
       
     </div>
   );
 };
 
-export default Alltoy;
+
+export default Alltoy
