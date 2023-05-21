@@ -1,7 +1,7 @@
 ### Baby Dolls
 
 ## Live Link
-Hosted in firebase -> [Baby_dolls](https://chaf-recipe.web.app/)
+Hosted in firebase -> [Baby_dolls](https://baby-dolls.web.app/)
 
 ## This website feature
 
