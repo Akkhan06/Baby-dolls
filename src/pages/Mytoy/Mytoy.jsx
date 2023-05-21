@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import MyToyCard from './MyToyCard';
 import Swal from 'sweetalert2';
+import setTitle from '../../hook/TitleHook';
 
 const Mytoy = () => {
   const {user} = useContext(AuthContext)
+  setTitle('My toys')
   
   const [toy, setToy] = useState([])
   useEffect(() => {

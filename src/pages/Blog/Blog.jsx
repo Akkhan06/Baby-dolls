@@ -1,6 +1,8 @@
 import React from "react";
+import setTitle from "../../hook/TitleHook";
 
 const Blog = () => {
+  setTitle("Blog")
   return (
     <div>
       <div className="mt-24 text-start w-8/12 mx-auto py-5">

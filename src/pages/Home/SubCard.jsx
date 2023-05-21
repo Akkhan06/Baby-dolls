@@ -4,7 +4,7 @@ import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 
 const SubCard = ({x}) => {
-    const {selername, discription, productName, price, rating, email, category, quantity, image} =x
+    const {selername, _id, discription, productName, price, rating, email, category, quantity, image} =x
     return (
         <div>
              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -34,7 +34,7 @@ const SubCard = ({x}) => {
               />{rating}
               
             </p>
-            <Link to={'/details'}
+            <Link to={`/details/${_id}`}
               href="#"
               class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >

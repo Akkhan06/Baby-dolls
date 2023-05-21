@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import { FaEdgeLegacy, FaRegTrashAlt } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
 import AlltoyCard from "./AlltoyCard";
+import setTitle from "../../hook/TitleHook";
+
 
 const Alltoy = () => {
+  setTitle('All toys')
   const [alldata, setData] = useState([]);
   const [alldata2, setData2] = useState([]);
   const url = 'http://localhost:5000/alltoys'

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
 import { useLoaderData } from "react-router-dom";
+import setTitle from "../../hook/TitleHook";
 
 const Details = () => {
   const [show, setShow] = useState(false);
@@ -19,6 +20,8 @@ const Details = () => {
     quantity,
     image,
   } = products
+
+  setTitle('Toy details')
 
   console.log(products)
   return (

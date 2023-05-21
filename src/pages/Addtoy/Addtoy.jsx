@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import setTitle from "../../hook/TitleHook";
 
 const Addtoy = () => {
+  setTitle('Add a')
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -27,6 +29,8 @@ const Addtoy = () => {
       quantity,
       image,
     };
+
+    
 
     console.log(allInfo);
 

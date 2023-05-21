@@ -1,8 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import setTitle from "../../hook/TitleHook";
 
 const UpdateToy = () => {
+  setTitle('Update a toy')
   const { id } = useParams();
   const updateHandelr = (event) => {
     event.preventDefault();
