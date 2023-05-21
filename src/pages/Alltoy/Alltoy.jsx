@@ -9,7 +9,7 @@ const Alltoy = () => {
   setTitle('All toys')
   const [alldata, setData] = useState([]);
   const [alldata2, setData2] = useState([]);
-  const url = 'http://localhost:5000/alltoys'
+  const url = 'https://testtt-akkhan06.vercel.app/alltoys'
 
   useEffect(() => {
     fetch(url)
@@ -31,11 +31,21 @@ const Alltoy = () => {
       .then((data) => setData(data))   
   }
 
+const search = (e) => {
+        e.preventDefault()
+        
+        fetch(`https://testtt-akkhan06.vercel.app/search?query=${e.target.search.value}`)
+        .then(res => res.json())
+        .then(data => setData(data))
+        console.log(e.target.search.value)
+    }
+
+
   return (
     <div className="md:max-w-[1240px] mx-auto">
       <div className="my-6">
-        <form>
-          <label
+        <form onChange={search} >
+          <label 
             for="default-search"
             className="mb-2 text-sm  font-medium text-gray-900 sr-only dark:text-white"
           >
@@ -61,6 +71,7 @@ const Alltoy = () => {
             </div>
             <input
               type="search"
+              name="search"
               id="default-search"
               className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Search products"
@@ -70,7 +81,7 @@ const Alltoy = () => {
               type="submit"
               className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
-              Search
+              
             </button>
           </div>
         </form>

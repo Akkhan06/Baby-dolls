@@ -21,7 +21,7 @@ const Category = () => {
     const [subData2, setSubData2] = useState([])
 
     useEffect(() => {
-      fetch(`http://localhost:5000/alltoys_text/${subData}`)
+      fetch(`https://testtt-akkhan06.vercel.app/alltoys_text/${subData}`)
       .then(res => res.json())
       .then(data => {
         if (data.length >= 3) {

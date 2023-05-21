@@ -55,12 +55,12 @@ const router = createBrowserRouter([
         {
           path: "/details/:id",
           element: <PrivateRoutes><Details/></PrivateRoutes>,
-          loader: ({params}) => fetch(`http://localhost:5000/alltoys_one/${params.id}`)
+          loader: ({params}) => fetch(`https://testtt-akkhan06.vercel.app/alltoys_one/${params.id}`)
         },
         {
           path: '/edit/:id',
           element: <PrivateRoutes><UpdateToy></UpdateToy></PrivateRoutes>,
-          loader: ({params}) => fetch(`http://localhost:5000/alltoys_one/${params.id}`)
+          loader: ({params}) => fetch(`https://testtt-akkhan06.vercel.app/alltoys_one/${params.id}`)
         }
       ]
     },

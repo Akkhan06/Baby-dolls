@@ -27,7 +27,7 @@ const UpdateToy = () => {
       if (result.isConfirmed) {
         Swal.fire("Saved!", "", "success");
 
-        fetch(`http://localhost:5000/alltoys_one/${id}`, {
+        fetch(`https://testtt-akkhan06.vercel.app/alltoys_one/${id}`, {
           method: "PUT",
           headers: {
             "content-type": "application/json",

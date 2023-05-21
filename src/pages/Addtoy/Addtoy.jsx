@@ -45,7 +45,7 @@ const Addtoy = () => {
       if (result.isConfirmed) {
         Swal.fire("Saved!", "", "success");
 
-        fetch("http://localhost:5000/alltoys", {
+        fetch("https://testtt-akkhan06.vercel.app/alltoys", {
           method: "POST",
           headers: {
             "content-type": "application/json",
